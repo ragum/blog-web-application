@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+<h1>Create New Blog Post</h1>
+<form action="/submit-new" method="POST" enctype="multipart/form-data">
+	<input type="text" name="title" placeholder="Title" required><br><br>
+	<textarea name="description" placeholder="Description" rows="5" cols="30" required></textarea><br><br>
+	<input type="file" name="image" accept="image/*"><br><br>
+	<button type="submit">Submit</button>
+</form>
+<br>
+<a href="/">Back to Home</a>
+<%- include("partials/footer.ejs") %>

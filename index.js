@@ -35,9 +35,22 @@ async function writePosts(posts) {
     await fs.promises.writeFile('data.json', JSON.stringify(posts, null, 2));
 }
 
+const POSTS_PER_PAGE = 3;
+
 app.get("/", (req, res) => {
-    const posts = readPosts();
-    res.render("index.ejs", { posts: posts, title: "Blog Web Application" });
+    const posts = readPosts().sort((a, b) => b.createdAt - a.createdAt); // urut terbaru
+    const page = parseInt(req.query.page) || 1;
+    const start = (page - 1) * POSTS_PER_PAGE;
+    const end = start + POSTS_PER_PAGE;
+
+    const paginatedPosts = posts.slice(start, end);
+    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+
+    res.render("index.ejs", { 
+        posts: paginatedPosts,
+        currentPage: page,
+        totalPages: totalPages, 
+        title: "Blog Web Application" });
     console.log(posts);
 });
 

@@ -1,19 +1,33 @@
 <%- include("partials/header.ejs") %>
 <h1>My Blog</h1>
 <% if (posts.length === 0) { %>
-	<p>No blog post available</p>
+	<p class="text-center text-gray-400">No blog post available</p>
 <% } else { %>
-	<% posts.forEach(post => { %>
-	<div style="border:1px solid black; margin-bottom:10px; padding:10px;">
-		<% if (post.imagePath) {  console.log(post)%>
-			<img src="<%= post.imagePath %>" alt="Image" width="300px">
-		<% } %>
-		<h2><%= post.title %></h2>
-		<p><%= post.description %></p>
-		<br><br>
-		<a href="/edit/<%= post.id %>">Edit</a> | 
-        <a href="/delete/<%= post.id %>">Delete</a>
+	<div class="grid md:grid-cols-2 gap-6">
+		<% posts.forEach(post => { %>
+			<div class="bg-zinc-800 rounded-lg p-4 shadow hover:shadow-lg transition">
+				<% if (post.imagePath) { %>
+					<img src="<%= post.imagePath %>" alt="<%= post.title %>" class="w-full h-48 object-cover rounded mb-4">
+				<% } %>
+				<h2 class="text-xl font-semibold mb-2"><%= post.title %></h2>
+				<p class="text-gray-300 mb-4 line-clamp-3"><%= post.description %></p>
+				<a class="text-blue-400 hover:underline" href="/edit/<%= post.id %>">✏️ Edit</a> | 
+				<a href="/delete/<%= post.id %>" onclick="return confirm('Are you sure delete this post?')" class="text-red-400 hover:underline">🗑️ Delete</a>
+			</div>
+		<% }) %>
 	</div>
-	<% }) %>
+	<!-- pagination -->
+	<div class="mt-8 text-center space-x-2">
+		<% if (totalPages > 1) { %>
+		<% for (let i = 1; i <= totalPages; i++) { %>
+			<% if (i === currentPage) { %>
+			<span class="px-3 py-1 bg-blue-500 text-white rounded"><%= i %></span>
+			<% } else { %>
+			<a href="/?page=<%= i %>" class="px-3 py-1 bg-zinc-700 text-white rounded hover:bg-zinc-600"><%= i %></a>
+			<% } %>
+			&nbsp;
+		<% } %>
+		<% } %>
+	</div>
 <% } %>
 <%- include("partials/footer.ejs") %>

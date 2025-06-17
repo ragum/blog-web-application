@@ -4,32 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/styles/main.css">
+	<script src="https://cdn.tailwindcss.com"></script>
     <title><%= title %> </title>
 </head>
-<body>
-	<header>
-		<nav class="navbar navbar-expand-custom navbar-mainbg">
-		  	<a class="navbar-brand navbar-logo" href="#">My Blog Web Application</a>
-		  	<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-				<i class="fas fa-bars text-white"></i>
-		  	</button>
-		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-			  		<div class="hori-selector">
-						<div class="left"></div>
-			  		</div>
-					<li class="nav-item">
-						<a class="nav-link" href="/"><i class="far fa-copy"></i>Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/create-new"><i class="far fa-clone"></i>Post New</a>
-					</li>
-					<!-- <li class="nav-item">
-						<a class="nav-link" href="/edit"><i class="far fa-calendar-alt"></i>Edit</a>
-					</li> -->
-				</ul>
-		  	</div>
+<body class="min-h-screen flex flex-col">
+	<header class="bg-zinc-800 px-6 py-4 shadow-md">
+		<nav class="flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto">
+			<a class="text-xl font-bold text-blue-400 mb-2 md:mb-0" href="#">My Blog Web Application</a>
+			<div class="flex gap-4">
+				<a class="text-white hover:text-blue-400" href="/">
+					<i class="far fa-copy mr-1"></i>Home
+				</a>
+				<a class="text-white hover:text-blue-400" href="/new">
+					<i class="far fa-clone mr-1"></i>Post New
+				</a>
+			</div>
 		</nav>
 	</header>
-	<main>
+	<main class="flex-grow px-6 py-8 max-w-4xl mx-auto">

@@ -1,10 +1,19 @@
 <%- include("partials/header.ejs") %>
-<h1>Create New Blog Post</h1>
-<form action="/submit-new" method="POST" enctype="multipart/form-data">
-	<input type="text" name="title" placeholder="Title" required><br><br>
-	<textarea name="description" placeholder="Description" rows="5" cols="30" required></textarea><br><br>
-	<input type="file" name="image" accept="image/*"><br><br>
-	<button type="submit">Submit</button>
+<h1 class="text-2xl font-semibold mb-6 text-center">Create a New Blog Post</h1>
+<form action="/submit-new" method="POST" enctype="multipart/form-data" class="space-y-6 bg-zinc-800 p-6 rounded-lg shadow-lg">
+	<div>
+        <label class="block mb-1 font-medium" for="title">Title</label>
+        <input type="text" id="title" name="title" required class="w-full px-4 py-2 rounded bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label class="block mb-1 font-medium" for="description">Description</label>
+        <textarea id="description" name="description" rows="5" required class="w-full px-4 py-2 rounded bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <div>
+        <label class="block mb-1 font-medium" for="image">Image (optional)</label>
+        <input type="file" id="image" name="image" accept="image/*" class="text-white">
+      </div>
+      <button type="submit" class="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded">Submit</button>
 </form>
 <br>
 <a href="/">Back to Home</a>

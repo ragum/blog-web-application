@@ -107,6 +107,16 @@ app.post("/edit/:id", upload.single('image'), (req, res) => {
     res.redirect("/");
 });
 
+app.get('/post/:id', (req, res) => {
+    const posts = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+    const post = posts.find(p => p.id === req.params.id);
+    if (!post) return res.status(404).send("Post tidak ditemukan");
+    res.render('post.ejs', { 
+        post,
+        title: post.title
+    });
+});
+
 app.get("/delete/:id", (req, res) => {
     const posts = readPosts();
     const postIndex = posts.findIndex(p => p.id == req.params.id);

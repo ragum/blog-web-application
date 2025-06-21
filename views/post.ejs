@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+<article class="bg-zinc-800 p-6 rounded-lg shadow">
+    <h1 class="text-3xl font-bold mb-4 text-blue-400"><%= post.title %></h1>
+    <% if (post.imagePath) { %>
+    <img src="<%= post.imagePath %>" alt="<%= post.title %>" class="w-full h-auto object-cover rounded mb-6">
+    <% } %>
+    <p class="text-gray-200 leading-relaxed whitespace-pre-line"><%= post.description %></p>
+</article>
+
+<div class="mt-6 flex justify-between text-sm">
+    <a href="/edit/<%= post.id %>" class="text-blue-400 hover:underline">✏️ Edit Post</a>
+    <a href="/" class="text-gray-400 hover:underline">⬅️ Kembali ke Beranda</a>
+</div>
+<%- include("partials/footer.ejs") %>

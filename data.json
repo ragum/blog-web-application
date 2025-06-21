@@ -1,30 +1,63 @@
 [
-  {
-    "id": 1750134706169,
-    "imagePath": "/uploads/1750134706113-canvas-print-paw-patrol-marshall-ready-to-rescue-i111136.jpg",
-    "title": "one on another",
-    "description": "description",
-    "createdAt": "2025-06-17T04:31:46.169Z"
-  },
-  {
-    "id": 1750134741367,
-    "imagePath": "/uploads/1750134741319-206a456e12473cd5f5dd92e1e20015eaaded007bd74711ecfdb6937bdfea525d.jpg",
-    "title": "two blog",
-    "description": "lorem ipsum dolor amet",
-    "createdAt": "2025-06-17T04:32:21.367Z"
-  },
-  {
-    "id": 1750134776258,
-    "imagePath": "/uploads/1750134776239-image 1133 (1).png",
-    "title": "blog",
-    "description": "upsimwl akse",
-    "createdAt": "2025-06-17T04:32:56.258Z"
-  },
-  {
-    "id": 1750134817332,
-    "imagePath": "/uploads/1750134817306-Group 771471.png",
-    "title": "next",
-    "description": "next bog",
-    "createdAt": "2025-06-17T04:33:37.333Z"
-  }
-]
+    {
+      "id": "1",
+      "title": "Getting Started with Node.js",
+      "description": "Node.js is a powerful JavaScript runtime built on Chrome's V8 engine, allowing developers to run JavaScript server-side. In this article, you'll learn how to get started with Node.js, from installation to writing your first HTTP server. Whether you're building APIs, real-time applications, or utilities, Node.js offers a fast and scalable foundation for your backend.",
+      "imagePath": "/uploads/nodejs.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Mastering Express.js for Web Development",
+      "description": "Express.js is a minimalist and flexible Node.js web application framework that provides robust features for building APIs and web apps. We'll cover everything from setting up routes and middleware to organizing your project into a maintainable structure. Ideal for developers who want to go beyond the basics and build scalable Node.js apps.",
+      "imagePath": "/uploads/express.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Dynamic Templates with EJS",
+      "description": "EJS (Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript. This tutorial demonstrates how to pass data from your backend to your views, use loops and conditions in your HTML, and maintain reusable components. EJS is perfect for projects where you want logic and markup to live closely together.",
+      "imagePath": "/uploads/ejs.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Build a Blog App Without a Database",
+      "description": "Did you know you can build a complete blog application without using a database? This guide walks you through using Express.js and EJS to create a file-based blog system where posts are stored in a local JSON file. Learn how to structure routes, manage data, and build dynamic pages in a lightweight and beginner-friendly project.",
+      "imagePath": "/uploads/blog.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Design Tips for Backend Developers",
+      "description": "Backend developers often focus solely on logic and performance, neglecting UI and UX. In this post, we’ll explore simple yet effective design principles that backend developers can apply to make their applications more user-friendly, accessible, and visually appealing—even with minimal design experience.",
+      "imagePath": "/uploads/uiux.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Creating a Stylish Dark Mode with Tailwind CSS",
+      "description": "Dark mode is more than just a trend—it can reduce eye strain and save battery life. Tailwind CSS makes implementing dark themes incredibly simple with utility classes and a built-in dark mode configuration. Learn how to enable dark mode and design consistent, elegant interfaces that look great in any lighting condition.",
+      "imagePath": "/uploads/darkmode.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Handling File Uploads in Express with Multer",
+      "description": "Uploading files in web apps is a common feature. In this guide, we’ll use Multer, a middleware for handling multipart/form-data in Express, to allow users to upload images and documents. We’ll also discuss validating uploads, saving files securely, and displaying them dynamically on your site.",
+      "imagePath": "/uploads/upload.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Implementing Pagination Without a Database",
+      "description": "Pagination is essential for performance and usability in content-heavy sites. But what if you're not using a database? Learn how to paginate a static list of posts using JavaScript slice and query parameters in Express. This method works great for small apps and prototypes.",
+      "imagePath": "/uploads/pagination.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Why You Should Use Tailwind CSS",
+      "description": "Tailwind CSS offers a utility-first approach that allows for rapid development and consistent styling across your web application. In this article, we’ll discuss the benefits of using Tailwind, how it compares to traditional CSS frameworks, and why developers love its flexibility and customizability.",
+      "imagePath": "/uploads/tailwind.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Organizing Your Node.js Project Structure",
+      "description": "A clean and well-organized project structure is key to maintaining and scaling your Node.js applications. We’ll go through best practices for separating routes, controllers, views, and configuration files, making your codebase easier to navigate, test, and collaborate on.",
+      "imagePath": "/uploads/structure.jpg"
+    }
+  ]
+  

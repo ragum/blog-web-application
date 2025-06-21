@@ -1,5 +1,4 @@
 <%- include("partials/header.ejs") %>
-<h1>My Blog</h1>
 <% if (posts.length === 0) { %>
 	<p class="text-center text-gray-400">No blog post available</p>
 <% } else { %>
@@ -9,10 +8,17 @@
 				<% if (post.imagePath) { %>
 					<img src="<%= post.imagePath %>" alt="<%= post.title %>" class="w-full h-48 object-cover rounded mb-4">
 				<% } %>
-				<h2 class="text-xl font-semibold mb-2"><%= post.title %></h2>
-				<p class="text-gray-300 mb-4 line-clamp-3"><%= post.description %></p>
-				<a class="text-blue-400 hover:underline" href="/edit/<%= post.id %>">✏️ Edit</a> | 
-				<a href="/delete/<%= post.id %>" onclick="return confirm('Are you sure delete this post?')" class="text-red-400 hover:underline">🗑️ Delete</a>
+				<h2 class="text-gray-300 text-xl font-semibold mb-2"><%= post.title %></h2>
+				<p class="text-gray-300 mb-4 line-clamp-3">
+					<%= post.description.length > 150 ? post.description.slice(0, 150) + '...' : post.description %>
+				</p>
+				<div class="flex justify-between">
+					<a href="/post/<%= post.id %>" class="text-blue-400 hover:underline">📖 View</a>
+					<div class="space-x-3">
+						<a class="text-blue-400 hover:underline" href="/edit/<%= post.id %>">✏️ Edit</a> | 
+						<a href="/delete/<%= post.id %>" onclick="return confirm('Are you sure delete this post?')" class="text-red-400 hover:underline">🗑️ Delete</a>
+					</div>
+				</div>
 			</div>
 		<% }) %>
 	</div>
